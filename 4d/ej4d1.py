@@ -34,11 +34,14 @@ Exemple:
          "Result: " 11
 """
 
-def sum():
-    # Write here your code
-    pass
+def sum(): #No ponemos nada dentro del parentesis porque recibe la variable despues con el input
+    numero_1 = int(input("Dame el primer numero que deseas sumar:"))
+    numero_2 = int(input("Dame el segundo numero que deseas sumar:"))
+    calculo = numero_1 + numero_2
+    return print(f"Result:  {calculo}")
+
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# sum()
+#sum()
