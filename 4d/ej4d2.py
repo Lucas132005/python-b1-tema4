@@ -37,11 +37,12 @@ Exemple:
 
 """
 def create_read_file():
-    # Write here your code
-    pass
-
-
+    with open ('text_file.txt','w+') as f:
+        f.write("Joan\nPerez\n30")
+        f.seek(0)               #Sin el .seek() no devolveria nada, porque despues del .write el "puntero" esta al final del archivo y cuando le mandas .read() lee desde donde esta el puntero, como esta al final pues no lee nada.
+        lectura = f.read()      #La función .seek sirve justamente para poner el puntero en la posición que quieras, en este caso al principio de todo dandole el indice 0.
+        print(lectura)          #Demasiados caracteres para un # pero son apuntes para mi.
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# create_read_file()
+create_read_file()  
